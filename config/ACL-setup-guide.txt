@@ -1,0 +1,40 @@
+01. composer require brian2694/laravel-toastr
+
+Add the service provider to config/app.php
+
+Brian2694\Toastr\ToastrServiceProvider::class,
+
+Optionally include the Facade in config/app.php if you'd like.
+
+'Toastr'  => Brian2694\Toastr\Facades\Toastr::class,
+
+php artisan vendor:publish
+
+02. create custom pagination resources/js/components/pagination.vue
+03. create new assets file in resources/js/vue-assets.js
+03. create new file in app/helper.php
+04. in composer.json file add this line of code ( mean app/helper.php file need to be added)
+
+"autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        },
+        "files": [
+            "app/helper.php"
+        ]
+    },
+
+ 05. run in terminal = composer dump-autoload
+
+ 06. Install Laravel Breadcrumbs
+		Run this at the command line: 
+		composer require davejamesmiller/laravel-breadcrumbs:5.x
+
+ 07. Define your breadcrumbs
+	Create a file called routes/breadcrumbs.php that looks like this:
+
+ 08. php artisan vendor:publish --tag=breadcrumbs-config
+
+ 09. npm install moment
+
+ 10. npm install vue-focus --save
